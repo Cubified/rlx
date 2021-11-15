@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>rlx</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: black;
+      }
+      * {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+      #circle {
+        position: absolute;
+        z-index: 999;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: 3px solid black;
+        display: none;
+        left: -50px;
+        top: -50px;
+      }
+      .center {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        transform: translateY(calc(50% - 100px));
+        transition: opacity 0.5s;
+        opacity: 1;
+      }
+      button {
+        width: 100px;
+        height: 50px;
+        border: none;
+        background: #f3f3f3;
+        cursor: pointer;
+        outline: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='circle'></div>
+    <div class='center'>
+      <div>
+        <h1>blue marble</h1>
+        <h3>a little game</h3>
+        <button id='start'>play</button>
+      </div>
+    </div>
+
+    <audio src="pop.m4a" id="pop" preload></audio>
+
+    <script src="node_modules/three/build/three.min.js"></script>
+    <script src="node_modules/camera-controls/dist/camera-controls.min.js"></script>
+    <!-- <script src="lib/ColladaLoader.js"></script> -->
+
+    <script src="lib/PointerLockControls.js"></script>
+    <script src="lib/SimplexNoise.js"></script>
+
+    <script src="lib/EffectComposer.js"></script>
+    <script src="lib/Pass.js"></script>
+    <script src="lib/RenderPass.js"></script>
+    <script src="lib/ShaderPass.js"></script>
+
+    <script src="lib/CopyShader.js"></script>
+    <script src="lib/SSAOShader.js"></script>
+    <script src="lib/LuminosityShader.js"></script>
+    <script src="lib/SobelOperatorShader.js"></script>
+
+    <script src="lib/SSAOPass.js"></script>
+
+    <script src="lib/Sky.js"></script>
+    <script src="lib/Water.js"></script>
+    <script src="lib/Atmosphere.js"></script>
+    <script src="lib/MarchingCubes.js"></script>
+    <script src="lib/MetaballMaterial.js"></script>
+
+    <script src="rlx.js"></script>
+  </body>
+</html>
